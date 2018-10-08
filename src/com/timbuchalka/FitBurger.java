@@ -3,10 +3,10 @@ package com.timbuchalka;
 /**
  * Created by Antonina on 2017-05-06.
  */
-public class HealthyBurger extends Burger{
+public class FitBurger extends Burger{
     private boolean avocado;
     private boolean carrot;
-    public HealthyBurger(String meat, double price) {
+    public FitBurger(String meat, double price) {
         super("brown rye", meat, price);
         this.avocado = false;
         this.carrot = false;
@@ -29,9 +29,9 @@ public class HealthyBurger extends Burger{
     }
 
     @Override
-    public String showOrder() {
+    public String showOrderDetails() {
 
-        return super.showOrder() + "\n avocado: " + isAvocado() + "\n carrot: " + isCarrot();
+        return super.showOrderDetails() + "\navocado: " + isAvocado() + "\ncarrot: " + isCarrot();
     }
 
     @Override

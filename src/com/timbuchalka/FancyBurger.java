@@ -3,11 +3,11 @@ package com.timbuchalka;
 /**
  * Created by Antonina on 2017-05-06.
  */
-public class DeluxBurger extends Burger{
+public class FancyBurger extends Burger{
     private boolean chips;
     private String drink;
 
-    public DeluxBurger(String rollType, String meat, double price) {
+    public FancyBurger(String rollType, String meat, double price) {
         super(rollType, meat, price);
         this.chips = true;
         this.drink = "cola";
@@ -18,8 +18,8 @@ public class DeluxBurger extends Burger{
     }
 
     @Override
-    public String showOrder() {
-        return super.showOrder() + "\n chips: true \n drink: " + drink;
+    public String showOrderDetails() {
+        return super.showOrderDetails() + "\nchips: true \ndrink: " + drink;
     }
 
     @Override

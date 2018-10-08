@@ -54,10 +54,16 @@ public class Burger {
         this.cucumber = cucumber;
     }
 
-    public String showOrder() {
-        return getClass().getSimpleName() + ": \n lettuce: " + isLettuce() + "\n tomato: "
-                + isTomato() + "\n bbqSauce: " + isBbqSauce() + "\n cucmber: " + isCucumber();
+    public void showSummary(){
+        System.out.println("\nThe cost of " + getClass().getSimpleName() + ": " + countCost());
+        System.out.println(showOrderDetails());
     }
+
+    public String showOrderDetails() {
+        return "lettuce: " + isLettuce() + "\ntomato: "
+                + isTomato() + "\nbbqSauce: " + isBbqSauce() + "\ncucmber: " + isCucumber();
+    }
+
 
     public double countCost() {
         if(lettuce) {
@@ -77,4 +83,5 @@ public class Burger {
         }
         return this.price;
     }
+
 }

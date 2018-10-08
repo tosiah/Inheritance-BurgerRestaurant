@@ -9,10 +9,7 @@ public class Main {
         hamburger.setBbqSauce(false);
         hamburger.setCucumber(true);
 
-        System.out.println("The cost of Burger is " + hamburger.countCost());
-        System.out.println(hamburger.showOrder());
-
-        HealthyBurger fit = new HealthyBurger("pork", 4.0);
+        FitBurger fit = new FitBurger("pork", 4.0);
         fit.setLettuce(true);
         fit.setTomato(true);
         fit.setBbqSauce(false);
@@ -20,17 +17,17 @@ public class Main {
         fit.setAvocado(true);
         fit.setCucumber(true);
 
-        System.out.println("The cost of HealthyBurger is " + fit.countCost());
-        System.out.println(fit.showOrder());
+        FancyBurger fancy = new FancyBurger("rye", "chicken", 6.0);
+        fancy.setLettuce(true);
+        fancy.setTomato(true);
+        fancy.setBbqSauce(false);
+        fancy.setCucumber(true);
+        fancy.setDrink("tea");
 
-        DeluxBurger del = new DeluxBurger("rye", "chicken", 6.0);
-        del.setLettuce(true);
-        del.setTomato(true);
-        del.setBbqSauce(false);
-        del.setCucumber(true);
-        del.setDrink("tea");
-        System.out.println("The cost of DeluxBurger is " + del.countCost());
-        System.out.println(del.showOrder());
-
+        hamburger.showSummary();
+        fit.showSummary();
+        fancy.showSummary();
     }
+
+
 }
